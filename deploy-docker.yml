@@ -9,7 +9,10 @@
         update_cache: yes
     - name: Install docker
       apt:
-        name: docker
+        name: 
+         - docker-ce
+         - docker-ce-cli
+         - containerd.io
         state: present
     - name: start docker
       service:
